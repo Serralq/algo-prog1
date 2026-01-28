@@ -57,10 +57,10 @@ RM = /home/serralq/.nix-profile/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/serralq/Downloads/School/Competitive/template
+CMAKE_SOURCE_DIR = /home/serralq/Downloads/School/Algo/template
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/serralq/Downloads/School/Competitive/template
+CMAKE_BINARY_DIR = /home/serralq/Downloads/School/Algo/template
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,16 +87,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Competitive/template/CMakeFiles /home/serralq/Downloads/School/Competitive/template//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Algo/template/CMakeFiles /home/serralq/Downloads/School/Algo/template//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Competitive/template/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Algo/template/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Competitive/template/CMakeFiles /home/serralq/Downloads/School/Competitive/template//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Algo/template/CMakeFiles /home/serralq/Downloads/School/Algo/template//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Competitive/template/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Algo/template/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target
