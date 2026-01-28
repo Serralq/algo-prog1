@@ -51,6 +51,6 @@ INVALID (no stable matching)
 - TODO Time testing outputs
 - TODO Randomly generate inputs and outputs
 ## Kim
-- TODO Reading files
-- TODO Verify inputs are valid (eg: equal number of hospital and student)
-- TODO Matching engine
+- ~~TODO Reading files~~
+- ~~TODO Verify inputs are valid (eg: equal number of hospital and student)~~
+- ~~TODO Matching engine~~
