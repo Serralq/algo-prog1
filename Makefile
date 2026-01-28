@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/serralq/.nix-profile/bin/cmake
+CMAKE_COMMAND = /nix/store/2lrbixyw95bjg0x1aav648r0h0zsj2jl-cmake-4.1.1/bin/cmake
 
 # The command to remove a file.
-RM = /home/serralq/.nix-profile/bin/cmake -E rm -f
+RM = /nix/store/2lrbixyw95bjg0x1aav648r0h0zsj2jl-cmake-4.1.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/serralq/Downloads/School/Algo/template
+CMAKE_SOURCE_DIR = /home/serralq/stow/Remote/Downloads/School/Algo/prog1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/serralq/Downloads/School/Algo/template
+CMAKE_BINARY_DIR = /home/serralq/stow/Remote/Downloads/School/Algo/prog1
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/serralq/Downloads/School/Algo/template
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	/home/serralq/.nix-profile/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/nix/store/2lrbixyw95bjg0x1aav648r0h0zsj2jl-cmake-4.1.1/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/home/serralq/.nix-profile/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/nix/store/2lrbixyw95bjg0x1aav648r0h0zsj2jl-cmake-4.1.1/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,16 +87,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Algo/template/CMakeFiles /home/serralq/Downloads/School/Algo/template//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/stow/Remote/Downloads/School/Algo/prog1/CMakeFiles /home/serralq/stow/Remote/Downloads/School/Algo/prog1//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Algo/template/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/stow/Remote/Downloads/School/Algo/prog1/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Algo/template/CMakeFiles /home/serralq/Downloads/School/Algo/template//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/stow/Remote/Downloads/School/Algo/prog1/CMakeFiles /home/serralq/stow/Remote/Downloads/School/Algo/prog1//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/Downloads/School/Algo/template/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/serralq/stow/Remote/Downloads/School/Algo/prog1/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target
@@ -136,6 +136,19 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+#=============================================================================
+# Target rules for targets named verify
+
+# Build rule for target.
+verify: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 verify
+.PHONY : verify
+
+# fast build rule for target.
+verify/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/verify.dir/build.make CMakeFiles/verify.dir/build
+.PHONY : verify/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -160,6 +173,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+verify.o: verify.cpp.o
+.PHONY : verify.o
+
+# target to build an object file
+verify.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/verify.dir/build.make CMakeFiles/verify.dir/verify.cpp.o
+.PHONY : verify.cpp.o
+
+verify.i: verify.cpp.i
+.PHONY : verify.i
+
+# target to preprocess a source file
+verify.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/verify.dir/build.make CMakeFiles/verify.dir/verify.cpp.i
+.PHONY : verify.cpp.i
+
+verify.s: verify.cpp.s
+.PHONY : verify.s
+
+# target to generate assembly for a file
+verify.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/verify.dir/build.make CMakeFiles/verify.dir/verify.cpp.s
+.PHONY : verify.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -170,9 +207,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... verify"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... verify.o"
+	@echo "... verify.i"
+	@echo "... verify.s"
 .PHONY : help
 
 
