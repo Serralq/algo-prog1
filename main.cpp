@@ -25,14 +25,27 @@ bool validateInput(vector<vector<int>> &preferences) {
     return true;
 }
 
-void solve() {
-    int n;
-    std::cin >> n;
-    while (n--) {
-        std::string s;
-        std::cin >> s;
-        std::cout << s << std::endl;
+bool applicantPrefersH1ToH(vector<vector<int>> &preferences, int a, int h, int h1) {
+    int n = preferences[0].size();
+    for (int i = 0; i < n; i++)
+    {
+        // if we get to h1 first, applicant a prefers h1 to h
+        if (prefer[n + a - 1][i] == h1)
+            return true;
+        // if we get to h first, applicant a does not prefer h1 to h
+        if (prefer[n + a - 1][i] == h)
+            return false;
     }
+}
+
+void solve() {
+    vector<vector<int>> preferences = readInput();
+    bool valid = validateInput(preferences);
+    if (!valid) {
+        std::cout << "INVALID INPUT" << std::endl;
+        return;
+    }
+    
 }
 
 int main() {
