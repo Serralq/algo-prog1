@@ -14,6 +14,17 @@ vector<vector<int>> readInput() {
     return preferences;
 }
 
+bool validateInput(vector<vector<int>> &preferences) {
+    int r = preferences.size();
+    if (r == 0) return false;
+    int c = preferences[0].size();
+    if (r != c * 2) return false;
+    for (int i = 0; i < r; i++) {
+        if (preferences[i].size() != c) return false;
+    }
+    return true;
+}
+
 void solve() {
     int n;
     std::cin >> n;
