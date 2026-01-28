@@ -1,5 +1,6 @@
 # Names
 Alexander Dao (UFID: 45705087)
+
 Alexander Kim (UFID: PLEASE FILL THIS IN)
 
 # Compilation
@@ -27,7 +28,7 @@ cat input1-file input2-file | ./verify > output-file
 
 # Assumptipons
 This was developed with the shell.nix file using an isolated nix shell enviroment,
-all program dependencies are list out.
+where all program dependencies are list out.
 ``` bash
 nix-shell
 ```
@@ -36,21 +37,20 @@ Follows the input and output format as shown on canvas.
 
 Additionally, 
 - the main may send error codes such as 
+
 INVALID (unequal student and hospital)
+
 INVALID (no stable matching)
+
 - the verify's should first get the original main's input and then main's output as an input
-
-
 
 # TODO Part C Graph
 
 # Tasks
 ## Dao
-// TODO Verify solution
-// TODO Testing / Edge cases (empty file, n = 1 hospital and student)
-// TODO Time testing outputs
-// TODO Randomly generate inputs and outputs
+- TODO Time testing outputs
+- TODO Randomly generate inputs and outputs
 ## Kim
-// TODO Reading files
-// TODO Verify inputs are valid (eg: equal number of hospital and student)
-// TODO Matching engine
+- TODO Reading files
+- TODO Verify inputs are valid (eg: equal number of hospital and student)
+- TODO Matching engine
