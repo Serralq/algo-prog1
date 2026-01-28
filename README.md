@@ -20,7 +20,8 @@ Referencing the ./test.sh as an example:
 
 ``` bash
 make
-./program-name < input-file > output-file
+./main < input-file > output-file
+cat input1-file input2-file | ./verify > output-file
 ```
 
 
@@ -37,7 +38,7 @@ Additionally,
 - the main may send error codes such as 
 INVALID (unequal student and hospital)
 INVALID (no stable matching)
-- the verify's input format should match the main's output format.
+- the verify's should first get the original main's input and then main's output as an input
 
 
 
