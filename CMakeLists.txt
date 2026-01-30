@@ -7,3 +7,6 @@ add_executable(main
 
 add_executable(verify
         verify.cpp)
+
+add_executable(test
+        test.cpp)
