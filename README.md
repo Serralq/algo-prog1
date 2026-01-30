@@ -17,12 +17,19 @@ cmake .
 4) This will output any differences between expected and actual output
 
 # Advanced Running
-Referencing the ./test.sh as an example:
+If you want to run the program yourself, use the ./test.sh as a reference:
 
 ``` bash
 make
+# For main matching program
 ./main < input-file > output-file
+# For verify solution program
 cat input1-file input2-file | ./verify > output-file
+# For generating random preference list and every program
+./test $n >input
+
+time ./main <input >output
+cat input output | ./verify
 ```
 
 
@@ -32,6 +39,9 @@ where all program dependencies are list out.
 ``` bash
 nix-shell
 ```
+
+You probably don't need to run nixOS as long as you have a unix system with all the listed dependecies
+listed out in the shell.nix file.
 
 Follows the input and output format as shown on canvas.
 
@@ -45,12 +55,7 @@ INVALID (no stable matching)
 - the verify's should first get the original main's input and then main's output as an input
 
 # TODO Part C Graph
-
-# Tasks
-## Dao
-- TODO Time testing outputs
-- TODO Randomly generate inputs and outputs
-## Kim
-- ~~TODO Reading files~~
-- ~~TODO Verify inputs are valid (eg: equal number of hospital and student)~~
-- ~~TODO Matching engine~~
+The data was generated using test.cpp and test.sh but the graph was made using google sheets.
+![](./graph.png)
+As n doubles, the time it takes to for main and verify to complete the task quadruples, suggesting the running time isolated
+0(n^2).
