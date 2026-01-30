@@ -20,18 +20,17 @@ cmake .
 If you want to run the program yourself, use the ./test.sh as a reference:
 
 ``` bash
+cmake .
 make
 # For main matching program
 ./main < input-file > output-file
 # For verify solution program
 cat input1-file input2-file | ./verify > output-file
 # For generating random preference list and every program
-./test $n >input
-
-time ./main <input >output
+./test 5 >input
+./main <input >output
 cat input output | ./verify
 ```
-
 
 # Assumptipons
 This was developed with the shell.nix file using an isolated nix shell enviroment,
